@@ -1,0 +1,12 @@
+langchain
+langchain-community
+langchain-openai
+chromadb
+pypdf
+sentence-transformers
+langchain-huggingface
+streamlit
+torch 
+torchvision 
+torchaudio 
+transformers
