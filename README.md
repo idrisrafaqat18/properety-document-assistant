@@ -19,37 +19,35 @@ A specialized Retrieval-Augmented Generation (RAG) application engineered to ana
 
 
 ⚙️ Installation & Setup
+1. Prerequisites
 
-    Prerequisites
+Install Ollama and pull the model:
+Bash
 
-        Install Ollama and pull the model:
-        Bash
+ollama pull qwen2.5
 
-        ollama pull qwen2.5
+2. Environment Setup
+Bash
 
-    Environment Setup
-    Bash
+# Clone the repository
+git clone [https://github.com/idrisrafaqat18/properety-document-assistant.git](https://github.com/idrisrafaqat18/properety-document-assistant.git)
+cd properety-document-assistant
 
-    # Clone the repository
-    git clone https://github.com/idrisrafaqat18/properety-document-assistant.git
-    cd property-document-assistant
+# Install required dependencies
+pip install streamlit chromadb pypdf sentence-transformers langchain-community langchain-core langchain-ollama langchain-huggingface langchain-chroma
 
-    # Install required dependencies
-    pip install -r requirements.txt
+3. Run the Application
+Bash
 
-
-3. **Run the Application**
-   ```bash
-   streamlit run src/rag_app.py
-   
+streamlit run src/rag_app.py
 
 🔍 Engineering Highlights
 
-    Smart Chunking Strategy: Utilizes RecursiveCharacterTextSplitter with 1000-character blocks and 100-character overlaps to maintain semantic context across paragraph breaks.
+    Smart Chunking Strategy: Utilizes RecursiveCharacterTextSplitter with 1000-character blocks and 100-character overlaps to maintain semantic context.
 
-    Stateful Persistence: Implemented logic to detect existing databases on startup, preventing redundant embedding generation and optimizing computation time.
+    Stateful Persistence: Implemented logic to detect existing databases on startup, preventing redundant embedding generation.
 
-    Robust UI Interaction: Designed a safe interaction layer between the engine and frontend using tuple-based response handling to prevent runtime unpacking errors.
+    Robust UI Interaction: Designed a safe interaction layer using tuple-based response handling to prevent runtime unpacking errors.
 
 Developed by Idris Rafaqat Hussain
 
