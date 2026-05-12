@@ -22,12 +22,10 @@ A specialized Retrieval-Augmented Generation (RAG) application engineered to ana
 1. Prerequisites
 
 Install Ollama and pull the model:
-Bash
 
 ollama pull qwen2.5
 
 2. Environment Setup
-Bash
 
 # Clone the repository
 git clone [https://github.com/idrisrafaqat18/properety-document-assistant.git](https://github.com/idrisrafaqat18/properety-document-assistant.git)
@@ -37,17 +35,16 @@ cd properety-document-assistant
 pip install streamlit chromadb pypdf sentence-transformers langchain-community langchain-core langchain-ollama langchain-huggingface langchain-chroma
 
 3. Run the Application
-Bash
 
 streamlit run src/rag_app.py
 
 🔍 Engineering Highlights
 
-    Smart Chunking Strategy: Utilizes RecursiveCharacterTextSplitter with 1000-character blocks and 100-character overlaps to maintain semantic context.
+    Smart Chunking Strategy: Utilizes RecursiveCharacterTextSplitter with 1000-character blocks and 100-character overlaps[cite: 1].
 
-    Stateful Persistence: Implemented logic to detect existing databases on startup, preventing redundant embedding generation.
+    Stateful Persistence: Implemented logic to detect existing databases on startup to prevent redundant embedding generation[cite: 1].
 
-    Robust UI Interaction: Designed a safe interaction layer using tuple-based response handling to prevent runtime unpacking errors.
+    Robust UI Interaction: Designed a safe interaction layer using tuple-based response handling to prevent runtime errors[cite: 1].
 
 Developed by Idris Rafaqat Hussain
 
